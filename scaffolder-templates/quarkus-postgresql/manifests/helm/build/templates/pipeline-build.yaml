@@ -203,22 +203,22 @@ spec:
       workspaces:
       - name: reports
         workspace: reports
-    - name: scan-export-sbom
-      params:
-      - name: cyclonedxHostUrl
-        value: $(params.cyclonedx-host-url)
-      - name: image
-        value: {{ include "sha-image.dev-url" . }}@$(tasks.build-sign-image.results.IMAGE_DIGEST)
-      runAfter:
-      - acs-image-check
-      - acs-image-scan
-      - acs-deploy-check
-      taskRef:
-        kind: Task
-        name: scan-export-sbom
-      workspaces:
-      - name: repository
-        workspace: source-folder
+    # - name: scan-export-sbom
+    #   params:
+    #   - name: cyclonedxHostUrl
+    #     value: $(params.cyclonedx-host-url)
+    #   - name: image
+    #     value: {{ include "sha-image.dev-url" . }}@$(tasks.build-sign-image.results.IMAGE_DIGEST)
+    #   runAfter:
+    #   - acs-image-check
+    #   - acs-image-scan
+    #   - acs-deploy-check
+    #   taskRef:
+    #     kind: Task
+    #     name: scan-export-sbom
+    #   workspaces:
+    #   - name: repository
+    #     workspace: source-folder
     - name: query-rekor-signed-provenance
       params:
       - name: imageDigest
@@ -237,7 +237,7 @@ spec:
       - name: COMPONENT_ID
         value: $(params.component-id)
       runAfter:
-      - scan-export-sbom
+      # - scan-export-sbom
       - query-rekor-signed-provenance
       taskRef:
         kind: Task
