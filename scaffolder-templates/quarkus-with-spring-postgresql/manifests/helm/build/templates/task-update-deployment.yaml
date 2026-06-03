@@ -26,7 +26,7 @@ spec:
     - description: Newest image tag
       name: image-tag
       type: string
-    - default: argocd-server-janus-argocd.apps.cluster-jh82x.sandbox1737.opentlc.com
+    - default: argocd-server-rhdh-gitops.apps.cluster-jh82x.sandbox1737.opentlc.com
       description: ArgoCD host
       name: argocd-host
       type: string
