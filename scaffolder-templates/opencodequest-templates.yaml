@@ -6,7 +6,7 @@ metadata:
 spec:
   type: url
   targets:
-    - https://gitlab-gitlab.{{ cluster_subdomain }}/rhdh/rhdh-templates/-/blob/main/scaffolder-templates/fight-ui/template.yaml
-    - https://gitlab-gitlab.{{ cluster_subdomain }}/rhdh/rhdh-templates/-/blob/main/scaffolder-templates/quarkus-postgresql/template.yaml
-    - https://gitlab-gitlab.{{ cluster_subdomain }}/rhdh/rhdh-templates/-/blob/main/scaffolder-templates/quarkus-with-spring-postgresql/template.yaml
-    - https://gitlab-gitlab.{{ cluster_subdomain }}/rhdh/rhdh-templates/-/blob/main/scaffolder-templates/quarkus-ai/template.yaml
+    - ./fight-ui/template.yaml
+    - ./quarkus-postgresql/template.yaml
+    - ./quarkus-with-spring-postgresql/template.yaml
+    - ./quarkus-ai/template.yaml
